@@ -1,0 +1,34 @@
+{
+    "token": "",
+    "prefix": "?",
+    "status": "paypal invoices!",
+
+    "paypal_info": {
+        "option": "live",
+        "client": "",
+        "secret": "",
+        "email": "rebdamas@rebsdesigns.com",
+        "note": "some notes go here",
+        "tos": "cool tos goes here",
+        "logo": "must be a png"
+    },
+
+    "database": {
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "name": "paypalbot"
+    },
+
+    "embed": {
+        "color": "#000000",
+        "footer": "Made by NAT2K15",
+        "logo": ""
+    },
+
+
+    "perms_info": {
+        "support_roles": ["your-role-id-here"]
+    }
+
+}
