@@ -102,7 +102,7 @@ module.exports.run = async(client, message, args) => {
                                                     .addField(`Amount Due`, reslove[0].price, true)
                                                     .addField(`Currency`, `USD`, true)
                                                     .addField(`Invoice ID`, `\`${invoice.id}\``, true)
-                                                    .addField(`Link`, `[Pay Here](https://sandbox.paypal.com/invoice/payerView/details/${invoice.id})`, true)
+                                                    .addField(`Link`, `[Pay Here](https://paypal.com/invoice/payerView/details/${invoice.id})`, true)
                                                     .setThumbnail(config.embed.logo)
                                                     .setColor(config.embed.color)
                                                     .setFooter(config.embed.footer)
