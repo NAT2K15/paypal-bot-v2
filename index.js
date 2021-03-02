@@ -79,8 +79,8 @@ setInterval(() => {
                         connection.query(`SELECT * FROM paypalbot WHERE orderstatus = 'PAID' AND hasitbeensent = '1' AND payer_id = '${eachpayment.payer_id}'`, async function(errr, lastreslove) {
                             let channel = client.channels.cache.get(eachpayment.channel);
                             if (!channel) return console.log(chalk.red `[ERROR] ` + chalk.white `I was not able to find the channel "${invoice.channel}" it might of already been deleted!. If this issue is still on going make sure to contact NAT2K15 for support @ https://discord.gg/RquDVTfDwu`)
-                            connection.query(`SELECT * FROM products WHERE id = '${productid}'`, async function(er, forgetabouthtisone) {
-                                 let productid = lastreslove[0].productid;
+                             let productid = eachpayment.productid;
+                            connection.query(`SELECT * FROM products WHERE id = '${productid}'`, async function(er, forgetabouthtisone) {                   
                                 let e1 = new MessageEmbed()
                                     .setTitle(`Invoice Paid | ${eachpayment.discordTag}`)
                                     .setColor('GREEN')
