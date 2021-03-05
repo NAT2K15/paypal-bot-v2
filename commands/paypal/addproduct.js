@@ -73,7 +73,7 @@ module.exports.run = async(client, message, args) => {
                                                     connection.query(`SELECT * FROM products WHERE product = '${product}' AND price = '${price}' AND download_link = '${link}'`, async function(err, reslove) {
                                                         let e1 = new MessageEmbed()
                                                             .setTitle(`Database Changed!`)
-                                                            .setDescription(`I added the product to the database! To remove the product from the database please use \`${config.prefix}removeproduct ${reslove[0].id}\``)
+                                                            .setDescription(`I added the product to the database!`)
                                                             .setColor(config.embed.color)
                                                             .setFooter(config.embed.footer)
                                                         message.channel.bulkDelete(9)
